@@ -1,7 +1,7 @@
 
 const express = require('express');
 const app = express();
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 3001;
 
 // Middleware to set CORS headers
 app.use((req, res, next) => {
@@ -17,30 +17,32 @@ const words = [
     "mango", "nectarine", "orange", "papaya", "quince", "raspberry", "strawberry", "tangerine", "ugli", "vanilla",
     "watermelon", "xigua", "yam", "zucchini", "apricot", "blackberry", "blueberry", "cantaloupe", "dragonfruit",
     "grapefruit", "guava", "jackfruit", "kumquat", "lime", "lychee", "mulberry", "olive", "peach", "pear",
-    "persimmon", "pineapple", "plum", "pomegranate", "pumpkin", "starfruit", "tomato", "cucumber", "squash", "bellpepper",
+    "persimmon", "pineapple", "plum", "pomegranate", "pumpkin", "tomato", "cucumber", "squash", "bellpepper",
     "broccoli", "carrot", "cauliflower", "celery", "corn", "eggplant", "garlic", "lettuce", "onion", "peas",
-    "potato", "radish", "spinach", "turnip", "yam", "asparagus", "beet", "brusselsprout", "cabbage", "chard",
-    "collard", "kale", "leek", "okra", "parsnip", "rutabaga", "scallion", "shallot", "swede", "zucchini",
-    "artichoke", "arugula", "basil", "chive", "cilantro", "dill", "fennel", "lavender", "mint", "oregano",
-    "parsley", "rosemary", "sage", "thyme", "tarragon", "anise", "caraway", "cinnamon", "clove", "coriander",
-    "cumin", "ginger", "nutmeg", "paprika", "pepper", "saffron", "turmeric", "vanilla", "almond", "cashew",
-    "chestnut", "hazelnut", "macadamia", "peanut", "pecan", "pistachio", "walnut", "breadfruit", "coconut", "date",
-    "fig", "mango", "olive", "avocado", "kiwi", "lemon", "lime", "orange", "passionfruit", "pineapple",
-    "starfruit", "apricot", "blackberry", "blueberry", "boysenberry", "cranberry", "currant", "gooseberry", "grape",
-    "huckleberry", "loganberry", "mulberry", "persimmon", "plum", "pomegranate", "prune", "quince", "raspberry",
-    "strawberry", "tamarind", "acerola", "barberry", "bilberry", "cloudberry", "crowberry", "elderberry", "goji",
-    "hackberry", "honeyberry", "juniper", "lingonberry", "mulberry", "rowan", "salmonberry", "sea-buckthorn",
-    "serviceberry", "snowberry", "thimbleberry", "tomatillo", "whitebeam", "aronia", "babaco", "bignay", "camachile",
-    "capuli", "cempedak", "cherimoya", "cupuacu", "feijoa", "grumichama", "imbe", "jabuticaba", "jackfruit",
-    "longan", "lychee", "mangosteen", "marang", "medlar", "naranjilla", "noni", "papaya", "pawpaw", "pitanga",
-    "pitaya", "pulasan", "rambutan", "sapodilla", "soursop", "surinam", "tamarillo", "ugli", "wampi", "yangmei",
-    "yuzu", "santol", "velvet", "abiu", "ackee", "atemoya", "bacuri", "bilimbi", "calamondin", "cherimoya",
-    "cupuassu", "damson", "durian", "elephant", "feijoa", "fuyu", "gac", "genip", "horned", "imbe",
-    "ita", "jambolan", "keppel", "kwai", "langsat", "lucuma", "mamey", "mamoncillo", "marang", "miracle",
-    "monstera", "oroblanco", "passiflora", "pili", "pitomba", "pomelo", "rambutan", "redcurrant", "safou", "salak",
-    "santol", "sapotilla", "santol", "soursop", "sweetsop", "tamarillo", "tamarind", "ubajay", "ugni", "umbu",
-    "white", "yellow", "yunnan", "zacate", "ziziphus"
+    "potato", "radish", "spinach", "turnip", "asparagus", "beet", "brusselsprout", "cabbage", "chard",
+    "collard", "kale", "leek", "okra", "parsnip", "rutabaga", "scallion", "shallot", "swede", "artichoke",
+    "arugula", "basil", "chive", "cilantro", "dill", "fennel", "lavender", "mint", "oregano", "parsley",
+    "rosemary", "sage", "thyme", "tarragon", "anise", "caraway", "cinnamon", "clove", "coriander", "cumin",
+    "ginger", "nutmeg", "paprika", "pepper", "saffron", "turmeric", "almond", "cashew", "chestnut", "hazelnut",
+    "macadamia", "peanut", "pecan", "pistachio", "walnut", "breadfruit", "coconut", "avocado", "passionfruit",
+    "starfruit", "boysenberry", "cranberry", "currant", "gooseberry", "huckleberry", "loganberry", "prune",
+    "acerola", "barberry", "bilberry", "cloudberry", "crowberry", "goji", "hackberry", "honeyberry", "juniper",
+    "lingonberry", "rowan", "salmonberry", "sea-buckthorn", "serviceberry", "snowberry", "thimbleberry",
+    "tomatillo", "whitebeam", "aronia", "babaco", "bignay", "camachile", "capuli", "cempedak", "cherimoya",
+    "cupuacu", "feijoa", "grumichama", "imbe", "jabuticaba", "longan", "mangosteen", "marang", "medlar",
+    "naranjilla", "noni", "pawpaw", "pitanga", "pitaya", "pulasan", "rambutan", "sapodilla", "soursop",
+    "surinam", "tamarillo", "wampi", "yangmei", "yuzu", "santol", "velvet", "abiu", "ackee", "atemoya",
+    "bacuri", "bilimbi", "calamondin", "cupuassu", "damson", "durian", "elephant", "fuyu", "gac", "genip",
+    "horned", "ita", "jambolan", "keppel", "kwai", "langsat", "lucuma", "mamey", "mamoncillo", "miracle",
+    "monstera", "oroblanco", "passiflora", "pili", "pitomba", "pomelo", "redcurrant", "safou", "salak",
+    "sapotilla", "sweetsop", "ubajay", "ugni", "umbu", "zacate", "ziziphus", "acai", "amaranth", "aronia",
+    ,"blackcurrant", "chokeberry",
+
+    "quinoa", "buckwheat", "chia", "flaxseed", "hemp", "kamut", "millet", "sorghum", "spelt", "teff",
+    "triticale", "barley", "oat", "rye", "wheat", "maize", "rice", "wildrice", "kiwano", "yuzu", "camu",
+    "physalis", "wolfberry"
 ];
+
 
 // Endpoint to search for words
 app.get('/search', (req, res) => {
