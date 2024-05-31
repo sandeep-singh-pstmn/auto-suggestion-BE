@@ -25,6 +25,7 @@ const words = [
     "rosemary", "sage", "thyme", "tarragon", "anise", "caraway", "cinnamon", "clove", "coriander", "cumin",
     "ginger", "nutmeg", "paprika", "pepper", "saffron", "turmeric", "almond", "cashew", "chestnut", "hazelnut",
     "macadamia", "peanut", "pecan", "pistachio", "walnut", "breadfruit", "coconut", "avocado", "passionfruit",
+    "star", "statice", "stephanotis", "stock", "sunflower", "sweetpea", "tansy", "thistle", "tuberose",
     "starfruit", "boysenberry", "cranberry", "currant", "gooseberry", "huckleberry", "loganberry", "prune",
     "acerola", "barberry", "bilberry", "cloudberry", "crowberry", "goji", "hackberry", "honeyberry", "juniper",
     "lingonberry", "rowan", "salmonberry", "sea-buckthorn", "serviceberry", "snowberry", "thimbleberry",
