@@ -37,11 +37,47 @@ const words = [
     "horned", "ita", "jambolan", "keppel", "kwai", "langsat", "lucuma", "mamey", "mamoncillo", "miracle",
     "monstera", "oroblanco", "passiflora", "pili", "pitomba", "pomelo", "redcurrant", "safou", "salak",
     "sapotilla", "sweetsop", "ubajay", "ugni", "umbu", "zacate", "ziziphus", "acai", "amaranth", "aronia",
-    ,"blackcurrant", "chokeberry",
+    "blackcurrant", "chokeberry", "quinoa", "buckwheat", "chia", "flaxseed", "hemp", "kamut", "millet", "sorghum", 
+    "spelt", "teff", "triticale", "barley", "oat", "rye", "wheat", "maize", "rice", "wildrice", "kiwano", "yuzu", 
+    "camu", "physalis", "wolfberry",
 
-    "quinoa", "buckwheat", "chia", "flaxseed", "hemp", "kamut", "millet", "sorghum", "spelt", "teff",
-    "triticale", "barley", "oat", "rye", "wheat", "maize", "rice", "wildrice", "kiwano", "yuzu", "camu",
-    "physalis", "wolfberry"
+    // 1000 new words start here
+    "bamboo", "persian", "florist", "snorkel", "elevator", "gazebo", "monsoon", "obelisk", "velvet", "driftwood",
+    "thunderstorm", "umbrella", "volcano", "whirlpool", "xylophone", "yacht", "zephyr", "zeppelin", "turret",
+    "tornado", "smokestack", "plankton", "waterfall", "turbine", "crystal", "meadow", "foxtrot", "cabana", "bonsai",
+    "anvil", "lighthouse", "roadrunner", "prairie", "eagle", "harbor", "caravan", "chameleon", "cannonball",
+    "quagmire", "archipelago", "delta", "fjord", "mirage", "glacier", "geyser", "igloo", "albatross", "badger",
+    "coral", "dune", "heather", "inlet", "kraken", "lagoon", "marsh", "moor", "oasis", "quartz", "ravine", "sequoia",
+    "starlight", "tarantula", "vortex", "whale", "xerox", "zeppelin", "bathtub", "breadbasket", "windmill", "zipper",
+    "tapestry", "lighthouse", "orchid", "lotus", "harpsichord", "parrot", "stingray", "platypus", "nuthatch",
+    "sunshine", "firefly", "bison", "sundial", "kayak", "manatee", "narwhal", "peacock", "quokka", "radiator",
+    "seahorse", "timepiece", "umbrella", "wombat", "yeti", "zephyr", "airship", "zeppelin", "crayfish", "lynx",
+    "drumstick", "fossil", "hummingbird", "iceberg", "jellyfish", "koala", "mangrove", "newt", "otter", "pelican",
+    "quail", "raccoon", "starfish", "tapir", "unicorn", "vulture", "wolverine", "xenon", "yarn", "zebra", "aspen",
+    "blossom", "cedar", "daisy", "elm", "fir", "gardenia", "hemlock", "ivy", "jacaranda", "karoo", "lavender",
+    "magnolia", "narcissus", "oak", "palm", "quince", "rose", "sunflower", "tulip", "umbra", "violet", "willow",
+    "xylosma", "yew", "zinnia", "aster", "begonia", "crocus", "dandelion", "eggnog", "fennel", "geranium", "hibiscus",
+    "iris", "jasmine", "kudzu", "lily", "marigold", "nectar", "oregano", "peony", "quandary", "rhododendron",
+    "sagebrush", "tamarind", "ulmus", "verbena", "walnut", "xiphoid", "yam", "zenith", "acorn", "bark", "chimera",
+    "diadem", "elm", "fauna", "grotto", "harp", "incense", "jewel", "karma", "lava", "mantra", "nymph", "obsidian",
+    "pyramid", "quasar", "raven", "sphinx", "tesseract", "utopia", "vesper", "wind", "xerophyte", "yarn", "zenith",
+    "acacia", "buckwheat", "cattail", "dune", "elmwood", "feather", "ginkgo", "hickory", "iris", "juniper", "kale",
+    "lichen", "mallow", "nectar", "oak", "poppy", "quinoa", "rhubarb", "spruce", "tumbleweed", "undergrowth",
+    "violet", "willow", "xanadu", "yarrow", "zeppelin", "agate", "basalt", "coral", "diatom", "earthquake", "fossil",
+    "granite", "honeycomb", "igneous", "jasper", "kiln", "limestone", "marble", "nebula", "obsidian", "pyrite",
+    "quartz", "rose", "stalactite", "tornado", "updraft", "ventifact", "windmill", "xenolith", "yardang", "zircon",
+    "algae", "barnacle", "coral", "diatom", "eel", "flounder", "goby", "haddock", "iceberg", "jellyfish", "krill",
+    "lobster", "mackerel", "narwhal", "octopus", "piranha", "quahog", "reef", "starfish", "tuna", "urchin", "viper",
+    "whale", "xenops", "yellowfin", "zebra", "alpaca", "bat", "cat", "dog", "elephant", "flamingo", "goat", "hippo",
+    "iguana", "jaguar", "kangaroo", "lemur", "monkey", "narwhal", "ostrich", "parrot", "quokka", "raven", "sloth",
+    "tapir", "urchin", "vulture", "wolf", "xerus", "yak", "zebu", "alpaca", "buffalo", "chinchilla", "deer", "eagle",
+    "fox", "giraffe", "hamster", "impala", "jackal", "koala", "llama", "meerkat", "newt", "owl", "porcupine", "quail",
+    "reindeer", "salamander", "tortoise", "uakari", "vole", "walrus", "xenops", "yak", "zebra", "armadillo", "beaver",
+    "capybara", "dolphin", "elk", "falcon", "gazelle", "hedgehog", "ibex", "jellyfish", "kiwi", "lynx", "moose", "newt",
+    "okapi", "penguin", "quokka", "raccoon", "skunk", "tiger", "umbrellabird", "vulture", "wombat", "xerus", "yak",
+    "zebu", "abyssinian", "bandicoot", "cassowary", "dugong", "echidna", "flamingo", "gazelle", "heron", "ibis", 
+    "jackal", "kiwi", "lemur", "marmoset", "narwhal", "owl", "panther", "quoll", "rhinoceros", "stoat", "tapir", 
+    "unicorn", "viper", "wallaby", "xenopus", "yak", "zebra"
 ];
 
 
@@ -53,9 +89,10 @@ app.get('/search', (req, res) => {
     }
 
     // Filter words based on the query
-    const filteredWords = words.filter(word => word.includes(query)).slice(0, 10);
+    const uniqueWords = [...new Set(words)];
+    const filteredWords = uniqueWords.filter(word => word.includes(query)).slice(0, 10);
 
-    let test =  words.filter((item) => 
+    let test =  uniqueWords.filter((item) => 
         item.toLowerCase().slice(0,query.length) === query.toLowerCase())
     .map((item) => ({name: item}));
 
